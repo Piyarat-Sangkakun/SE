@@ -60,6 +60,14 @@
   .nav-menu-items {
     width: 250px;
     background-color: #060b26;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  
+
   }
   
   .navbar-toggle {
@@ -72,7 +80,7 @@
   }
   
   span {
-    margin-left: 16px;
+    justify-content: start;
   }
   .icon-bu{
     color: #060b26 !important;
@@ -81,12 +89,20 @@
     display: flex;
     margin: 0px;
     border: 1px solid rgb(77, 75, 75);
+    width: 250px;
   }
   li1{
     color:gray;
-    margin: 90px;
+    
   }
   h2{
     color:white;
-    margin: 90px;
+ 
   }
+ li{
+   display: flex;
+   flex-direction: column;
+  justify-content: flex-start;
+  
+ }
+ 

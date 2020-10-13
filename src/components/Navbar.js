@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
+import adam from './adam.jpg';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(true);
@@ -18,11 +19,13 @@ function Navbar() {
         </div>
         
           <ul className='nav-menu-items' >  
-            <div>
+            <div className='div1'>
+              <img src={adam} alt="images profile" />
               <h2>Adam</h2>
               <li1>Author(Thai)</li1>
             </div>
             <line />
+            <div className='div2'>
             {SidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
@@ -33,6 +36,7 @@ function Navbar() {
                 </li>
               );
             })}
+            </div>
           </ul>
         
       </IconContext.Provider>
