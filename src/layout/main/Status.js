@@ -4,25 +4,16 @@ import { MDBBtn, MDBTable, MDBTableBody, MDBTableHead  } from 'mdbreact';
 const Status = (props) => {
   const columns= [
     {
-      label: 'Order No',
-      field: 'order',
+      label: 'ID Research',
+      field: 'idr',
       sort: 'asc'
     },
     {
-      label: 'Name',
+      label: 'Name Research',
       field: 'name',
       sort: 'asc'
     },
-    {
-      label: 'Verify By',
-      field: 'by',
-      sort: 'asc'
-    },
-    {
-      label: 'Date',
-      field: 'date',
-      sort: 'asc'
-    },
+    
     {
       label: 'Status Payment',
       field: 'status',
@@ -33,25 +24,19 @@ const Status = (props) => {
 
   const rows_rounded_btn = [
     {
-      'order': 1,
-      'name': 'Name Researcher1',
-      'by': 'NameFinance',
-      'date': 'August 20,2020 10.30am',
+      'id': 111111,
+      'name': 'Registration',
+      'status': <MDBBtn color="danger" rounded size="sm">Pass</MDBBtn>
+    },
+    {
+      'id': 222222,
+      'name': 'Chatbot',
       'status': <MDBBtn color="success" rounded size="sm">Pass</MDBBtn>
     },
     {
-      'order': 2,
-      'name': 'Jacob',
-      'by': 'NameFinance',
-      'date': 'August',
-      'status': <MDBBtn color="success" rounded size="sm">Pass</MDBBtn>
-    },
-    {
-      'order': 3,
-      'name': 'Larry',
-      'by': 'NameFinance',
-      'date': 'August',
-      'status': <MDBBtn color="success" rounded size="sm">Pass</MDBBtn>
+      'id': 333333,
+      'name': 'AI',
+      'status': <MDBBtn color="success" rounded size="sm">Wait</MDBBtn>
     }
   ];
 

@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
 import SideBarConfig from './MenuConfig';
 
-import DropdownMenu from './DropdownMenu';
 import SimpleMenu from './SimpleMenu';
-import Dropdown from 'react-bootstrap/Dropdown';
 
 import userImage from '../../images/user.jpg';
 
@@ -58,8 +56,6 @@ function SideBarMenu() {
                 let liElementList = "";
                 if (menu.type === 'header') {
                     liElementList = <li className="header-menu"><span>{menu.title}</span></li>;
-                }else if(menu.type === 'dropdown' ) {
-                    liElementList = <DropdownMenu menu={menu}  active={menuItems[index].active} key={"sidebar"+index} handleClick={(e) => handleMenuDropDownClick(e,index) } />;
                 } else if(menu.type === 'simple' ) {
                     liElementList =  <SimpleMenu menu={menu} />;
                   
@@ -88,17 +84,16 @@ function SideBarMenu() {
                 <Scrollbars
                     renderThumbVertical={ renderCustomHorizontalThumb }>
                     <div className="sidebar-item sidebar-brand">
-                        <a href="#/header">Admin</a>
+                        <a href="#/header">Author</a>
                     </div>
                     <div className="sidebar-item sidebar-header d-flex flex-nowrap">
                         <div className="user-pic">
                             <img className="img-responsive img-rounded" src={userImage} alt="User " />
                         </div>
                         <div className="user-info">
-                            <span className="user-name">Jhon 
-                                <strong> Smith</strong>
+                            <span className="user-name"><strong> Jhon Smith</strong>
                             </span>
-                            <span className="user-role"> Administrator</span>
+                            <span className="user-role"> Author (Thai)</span>
                             <span className="user-status">
                                 <i className="fa fa-circle"></i>
                                 <span> Online</span>
