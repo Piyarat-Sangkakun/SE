@@ -2,19 +2,22 @@ import React, { Component } from "react";
 // import { Form } from 'semantic-ui-react'
 import './edit.css';
 
-
+import SideBar from '../sidebar/SideBarMenu'
 
 export default class Register extends Component {
 
+ 
     render() {
         return (
+         
             <form>
+               <SideBar />
                 <div className="auth-wrapper">
                     <div className="auth-inner">
                       <div>
-                        <h1>Register</h1>
+                        <h1>Edit</h1>
                         <div className="under-register">
-                          <p>Register on the platform </p>
+                          <p>Edit Profile </p>
                         </div>
                       </div>
 

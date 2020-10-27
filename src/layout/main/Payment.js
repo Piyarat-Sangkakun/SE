@@ -1,12 +1,12 @@
 import React from 'react';
 import { MDBBtn, MDBTable, MDBTableBody, MDBTableHead  } from 'mdbreact';
 import SideBar from '../sidebar/SideBarMenu'
-
-const Status = (props) => {
+import { Button } from '@material-ui/core';
+const Payment = (props) => {
   const columns= [
     {
       label: 'ID Research',
-      field: 'idr',
+      field: 'id',
       sort: 'asc'
     },
     {
@@ -14,42 +14,39 @@ const Status = (props) => {
       field: 'name',
       sort: 'asc'
     },
-    
     {
-      label: 'Status Payment',
-      field: 'status',
+      label: 'Price',
+      field: 'price',
       sort: 'asc'
     }
-
+    
   ];
 
   const rows_rounded_btn = [
     {
       'id': 111111,
       'name': 'Registration',
-      'status': <MDBBtn color="danger" rounded size="sm">Wait</MDBBtn>
-    },
-    {
-      'id': 222222,
-      'name': 'Chatbot',
-      'status': <MDBBtn color="success" rounded size="sm">Pass</MDBBtn>
-    },
-    {
-      'id': 333333,
-      'name': 'AI',
-      'status': <MDBBtn color="success" rounded size="sm">Pass</MDBBtn>
+      'price': '12000'
     }
+    
   ];
 
   return(
+    
     <div>
-    <SideBar />
+      <SideBar />
+      
     <MDBTable btn>
       <MDBTableHead columns={columns} />
       <MDBTableBody rows={rows_rounded_btn} />
     </MDBTable>
+    <Button variant="contained" color="primary" disableElevation>
+  Disable elevation
+</Button>
     </div>
+    
   );
+  
 };
 
-export default Status;
+export default Payment;

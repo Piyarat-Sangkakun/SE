@@ -15,11 +15,11 @@
         
       },
       {
-        "title": "Check Payments",
+        "title": "Payment",
         "icon": "fa fa-shopping-cart",
         "active": false,
         "type":  "simple",
-        "href":"/Checkpayment"
+        "href":"/Payment"
       },
   
       {

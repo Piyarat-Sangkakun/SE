@@ -13,15 +13,15 @@ function App() {
   let style = toggled ? "toggled" : "";
   style += hasBackground ? " sidebar-bg" : "";
 
+
   return (
     <Router>
       <GlobalAppContext.Provider
         value={{toggled, setToggled, hasBackground, setHasBackground}}  
       >
         <div className={"page-wrapper default-theme bg2 "+ style  }>
-          <SideBar />
+          {/* <SideBar /> */}
           <MainContent />
-          DDDD;
         </div>
       </GlobalAppContext.Provider>
     </Router>
